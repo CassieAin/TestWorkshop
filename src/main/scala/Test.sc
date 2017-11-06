@@ -39,7 +39,7 @@ println(s"#1 - ${answer1}")
 // your code goes here
 
 /*
-val binaryNums = Source.fromFile("/home/roksolana/Documents/DataRoot/task2.txt").getLines.map(BigInt(_)).toList
+val binaryNums = Source.fromFile("path/task2.txt").getLines.map(BigInt(_)).toList
 val sumOfBins = binaryNums.sum.toString
 println(sumOfBins.count(_ == '0') - sumOfBins.count(_ == '1'))
 
@@ -76,7 +76,7 @@ println(s"#4 - ${size}")
 // #5
 
 // your code goes here
-val lines = Source.fromFile("/home/roksolana/Documents/DataRoot/task5.txt").getLines.map(BigInt(_)).toList
+val lines = Source.fromFile("path/task5").getLines.map(BigInt(_)).toList
 val answer5 = lines.sum.toString().take(10)
 println(s"#5 - ${answer5}")
 
