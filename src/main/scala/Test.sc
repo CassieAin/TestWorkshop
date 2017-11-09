@@ -7,31 +7,31 @@ val alphaU='A' to 'Z'
 def encrypt(shift: Int, str: String): String = {
   val newShift = shift % 26
   val charArray = str.toUpperCase().toCharArray()
-  var message = ""
+  val message = ""
 
   for (i <- charArray) {
     if (i.toInt == 32) {
       message += " ";
     } else {
-      var temp = (i.toInt - 65 + newShift) % 26
+      val temp = (i.toInt - 65 + newShift) % 26
       if (temp < 0) {
         temp += 26
       }
       message += (temp + 65).toChar
     }
   }
-  return message
+  message
 }
 
 def decrypt(shift: Int, str: String): String = {
-  return encrypt(shift * - 1, str)
+  encrypt(shift * - 1, str)
 }
-var i = 0
-var nums = 0 to 20
+val i = 0
+val nums = 0 to 20
 for (i <- nums){
   println(decrypt(i, "GHMABGZ VKXTMXL LNVVXLL EBDX GHG-LMHI, XGMANLBTLMBV XYYHKM"))
 }
-var answer1 = "NOTHING CREATES SUCCESS LIKE NONNSTOPM ENTHUSIASTIC EFFORT"
+val answer1 = "NOTHING CREATES SUCCESS LIKE NONNSTOPM ENTHUSIASTIC EFFORT"
 println(s"#1 - ${answer1}")
 
 // #2
